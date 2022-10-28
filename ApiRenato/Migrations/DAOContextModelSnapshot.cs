@@ -36,6 +36,32 @@ namespace ApiRenato.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Pessoas");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Nome = "Renato",
+                            Senha = "r3n4t0321",
+                            Sobrenome = "Azevedo",
+                            Usuario = "renatoads1"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Nome = "Isabela",
+                            Senha = "r3n4t0321",
+                            Sobrenome = "Lacerda",
+                            Usuario = "isabela321"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Nome = "Julia",
+                            Senha = "r3n4t0321",
+                            Sobrenome = "Lacerda",
+                            Usuario = "julia321"
+                        });
                 });
 #pragma warning restore 612, 618
         }

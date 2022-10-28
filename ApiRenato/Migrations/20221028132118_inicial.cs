@@ -21,6 +21,21 @@ namespace ApiRenato.Migrations
                 {
                     table.PrimaryKey("PK_Pessoas", x => x.Id);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Pessoas",
+                columns: new[] { "Id", "Nome", "Senha", "Sobrenome", "Usuario" },
+                values: new object[] { 1, "Renato", "r3n4t0321", "Azevedo", "renatoads1" });
+
+            migrationBuilder.InsertData(
+                table: "Pessoas",
+                columns: new[] { "Id", "Nome", "Senha", "Sobrenome", "Usuario" },
+                values: new object[] { 2, "Isabela", "r3n4t0321", "Lacerda", "isabela321" });
+
+            migrationBuilder.InsertData(
+                table: "Pessoas",
+                columns: new[] { "Id", "Nome", "Senha", "Sobrenome", "Usuario" },
+                values: new object[] { 3, "Julia", "r3n4t0321", "Lacerda", "julia321" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
