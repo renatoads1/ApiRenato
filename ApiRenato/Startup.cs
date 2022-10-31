@@ -30,6 +30,11 @@ namespace ApiRenato
             services.AddDbContext<DAOContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("WebApiDatabase"))
             );
+            //config repsitory
+            services.AddScoped<IPessoasRepository, PessoasRepository>();
+
+            //cors 
+            services.AddCors();
             // Add framework services.
             services.AddControllers();
         }
@@ -41,6 +46,11 @@ namespace ApiRenato
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(a =>a
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
 
             app.UseHttpsRedirection();
 
